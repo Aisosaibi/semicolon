@@ -3,9 +3,19 @@
 *.jar
 *.war
 
+# Python
+__pycache__/
+*.pyc
+
 # Node.js
 node_modules/
 npm-debug.log
+*.log
 
-# Environment variables (sensitive!)
+secrets.json
+config.local.json
+
+# Environment variables
 .env
+.env.local
+.env.*.local
