@@ -1,0 +1,9 @@
+# Ignore text
+*.txt
+
+# Ignore compiled Python files
+*.pyc
+
+# Ignore anything in the pycache folder
+__pycache__/
+
