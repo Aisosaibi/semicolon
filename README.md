@@ -1,6 +1,6 @@
 # Semicolon Africa: training work
 
-This repository holds tasks and exercises from my software engineering training at Semicolon Africa. It is a record of my learning, so some work here is unfinished or still needs correcting. Each folder is labelled honestly below.
+This repository holds tasks and exercises from my software engineering training at Semicolon Africa. It is a record of my learning (not everything is here—yet, so some work here is unfinished or still needs correcting. Each folder is labelled honestly below.
 
 ## What's inside
 
