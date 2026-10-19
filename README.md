@@ -10,7 +10,7 @@ This repository holds tasks and exercises from my software engineering training 
 | `python/` | Python tasks and exercises | In progress |
 | `javascript/` | JavaScript tasks and exercises | In progress |
 | `database-tasks/` | Database exercises from the Database Processing book | In progress |
-| `phase-gate/I/` | Phase gate I assessment work | Complete, needs review |
+| `phase-gate/I/` | Phase gate I assessment work | Completed as a student, needs review |
 
 ## Bigger projects (their own repos)
 
