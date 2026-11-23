@@ -1,0 +1,13 @@
+# Compiled bytecode - no thanks!
+*.class
+
+# Ignore Text files
+*.txt
+
+# Ignore HTML files
+*.html
+
+# Ignore the out folder
+out/
+
+node_modules/

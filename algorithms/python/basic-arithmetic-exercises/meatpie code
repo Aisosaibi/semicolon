@@ -1,0 +1,273 @@
+# ==================== (1) ====================
+
+# startriangle90.py
+print("*")
+print("**")
+print("***")
+print("****")
+
+
+# ==================== (2) ====================
+
+# printage.py
+age = input("Enter your age: ")
+
+# BUG: age is a string from input(), but %d expects an integer.
+# Fix: cast to int → age = int(input(...))
+print("You are %d years old." % age)
+
+
+# ==================== (3) ====================
+
+# add2digits.py
+number1 = int(input("Enter first integer: "))
+number2 = int(input("Enter Second integer: "))
+
+print("Sum: %d" % (number1 + number2))
+
+
+# ==================== (4) ====================
+
+# subtract2digits.py
+print("Hint: Keep within 1 decimal place.")
+number1 = float(input("Enter first number: "))
+number2 = float(input("Enter second number: "))
+
+# NOTE: Output label says "Sum" but this is a subtraction — copy-paste label bug from original.
+print("Sum: %.1f" % (number1 - number2))
+
+
+# ==================== (5) ====================
+
+# multiply2digits.py
+print("Hint: Ensure whole numbers.")
+number1 = int(input("Enter first number: "))
+number2 = int(input("Enter second number: "))
+
+# NOTE: Same label bug as (4) — says "Sum" but it's a product.
+print("Sum: %d" % (number1 * number2))
+
+
+# ==================== (6) ====================
+
+# countto3.py
+counter = 0
+
+# BUG (original): `counter ++` is not valid Java syntax (must be `counter++;`).
+# BUG (original): `if counter == 3` is missing parentheses — should be `if (counter == 3)`.
+# Both are fixed below in Python.
+
+counter += 1
+print(counter)
+
+counter += 1
+print(counter)
+
+counter += 1
+print(counter)
+
+if counter == 3:
+    print("Counted up to 3!")
+
+
+# ==================== (7) ====================
+
+# numbersquared.py
+import math
+
+number = float(input("Enter number: "))
+
+# BUG (original): `math.pow` must be `Math.pow` in Java (capital M). Also missing semicolon on import.
+# In Python, math.pow is correct but returns a float; that's fine here.
+num_squared = math.pow(number, 2)
+print("Your number squared is " + str(num_squared))
+
+
+# ==================== (8) ====================
+
+# numbercubed.py
+# (math already imported above; in a standalone file you'd import it again)
+
+number = float(input("Enter number: "))
+
+# BUG (original): Same `math.pow` → `Math.pow` issue as (7). Missing semicolon on import.
+num_cubed = math.pow(number, 3)
+print("Your number cubed is " + str(num_cubed))
+
+
+# ==================== (9) ====================
+
+# printfavcolor.py
+color = input("What's your favorite color: ")
+
+# BUG: printf format string has no placeholder (%s) for `color`, so it would never print the value.
+# Fix shown below.
+print("Your favorite color is %s" % color)
+
+
+# ==================== (10) ====================
+
+# print2xdigit.py
+
+# BUG: Variable name `2x_number` is illegal — identifiers can't start with a digit.
+# Fix: renamed to `two_x_number`.
+# BUG: Used %d (integer format) for a float result. Use %f or just print().
+number = float(input("Enter number: "))
+two_x_number = number * 2
+print("%f" % two_x_number)
+
+
+# ==================== (11) ====================
+
+# print0.5xdigit.py
+
+# BUG: Variable name `0.5x_number` is illegal (starts with digit, contains a dot).
+# Fix: renamed to `half_x_number`.
+# BUG: Class name `Print0.5xDigit` is also illegal in Java for the same reason.
+# BUG: Used %d for a float. Fixed to %f.
+number = float(input("Enter number: "))
+half_x_number = number / 2
+print("%f" % half_x_number)
+
+
+# ==================== (12) ====================
+
+# print2numbers.py
+number1 = int(input("Enter first integer: "))
+number2 = int(input("Enter second integer: "))
+
+# BUG: `%d%n, %d%n` places the newline BEFORE the comma+space, giving awkward output.
+# In Python %n isn't used; \n is the newline escape. Fixed below for clean output.
+print("%d\n%d" % (number1, number2))
+
+
+# ==================== (13) ====================
+
+# city.py
+city = "Lagos"
+print("I live in %s" % city)
+
+
+# ==================== (14) ====================
+
+# average3digits.py
+number1 = int(input("Enter first integer: "))
+number2 = int(input("Enter second integer: "))
+number3 = int(input("Enter third integer: "))
+
+# BUG: Integer division — (int + int + int) / 3 in Java truncates the decimal.
+# Fix: cast to float before dividing. In Python 3, / always gives a float, so this is auto-fixed.
+average = (number1 + number2 + number3) / 3
+print("Average: %f" % average)
+
+
+# ==================== (15) ====================
+
+# starbox.py
+print("\t****")
+print("\t****")
+print("\t****")
+print("\t****")
+
+
+# ==================== (16) ====================
+
+# multiplyby5.py
+number = int(input("Enter number: "))
+multiple = number * 5
+print(multiple)
+
+
+# ==================== (17) ====================
+
+# addten.py
+number = int(input("Enter number: "))
+
+# BUG (original): Missing closing brace for main() in Java.
+sum_ = number + 10  # `sum` is a built-in in Python, so renamed to sum_
+print(sum_)
+
+
+# ==================== (18) ====================
+
+# minusfive.py
+number = int(input("Enter number: "))
+
+# BUG: Variable is named `sum` and uses `number + 10` — should be `number - 5` to match the class name.
+# BUG (original): Missing closing braces for main() and class.
+difference = number - 5
+print(difference)
+
+
+# ==================== (19) ====================
+
+# modulotwo.py
+number = int(input("Enter number: "))
+
+# BUG (original): Missing closing braces for main() and class.
+remainder = number % 2
+print(remainder)
+
+
+# ==================== (20) ====================
+
+# areaofrectangle.py
+length = int(input("Enter length: "))
+width = int(input("Enter width: "))
+area = length * width
+print(area)
+
+
+# ==================== (21) ====================
+
+# areaoftriangle.py
+base = int(input("Enter base: "))
+
+# BUG: Second prompt says "Enter base:" but is reading into `height`. Should say "Enter height:".
+height = int(input("Enter height: "))
+
+# BUG: `base/2 * height` uses integer division — for odd bases this loses 0.5 before multiplying.
+# Formula should be (base * height) / 2. Fixed below.
+area = (base * height) / 2
+print(area)
+
+
+# ==================== (22) ====================
+
+# areaofcircle.py
+# BUG: `Math.pi` should be `Math.PI` in Java (it's a constant, all caps).
+# BUG: `area` is declared as `int` but Math.PI * r² is a float — should be `double`.
+# Both non-issues in Python; math.pi is correct and types are dynamic.
+number = int(input("Enter radius: "))
+area = math.pi * math.pow(number, 2)
+print(area)
+
+
+# ==================== (23) ====================
+
+# concatname.py
+firstName = input("Input first name: ")
+lastName = input("Input last name: ")
+
+# NOTE: No space between names — prints e.g. "JohnDoe". Intentional or bug?
+print(firstName + lastName)
+
+
+# ==================== (24) ====================
+
+# switchnumbers.py
+firstNumber = int(input("Input first number: "))
+secondNumber = int(input("Input second number: "))
+
+# BUG: `System.out.println(secondNumber, firstNumber)` — println doesn't accept two arguments in Java.
+# Should use printf or string formatting. Fixed below.
+print("%d %d" % (secondNumber, firstNumber))
+
+
+# ==================== (25) ====================
+
+# threespaces.py
+firstMessage = input("Input first word: ")
+secondMessage = input("Input second word: ")
+
+print("%s   %s" % (firstMessage, secondMessage))
