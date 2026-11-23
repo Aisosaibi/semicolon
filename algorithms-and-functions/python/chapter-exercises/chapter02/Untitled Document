@@ -1,0 +1,38 @@
+"""
+Exercise 2.1:
+
+x = 2
+y = 3
+
+a. print('x =', x)
+Answer: This code will display "x = 2", in the console.
+How:
+
+b. print('Value of', x, '+', x, 'is', (x + x))
+Answer: This code will display "Value of 2 + 2 is 4", in the console.
+How:
+
+c. print('x = ')
+Answer: This code will display "x = " in the console.
+How:
+
+
+d. print((x + y), '=', (y + x))
+Answer: This code will display "3 = 3" in the console.
+How:
+
+
+Exercise 2.2:
+
+rating = input('Enter an integer rating between 1 and 10')
+What's wrong with this code?
+
+Answer: While this code will run, the layman user will not be able to tell if the display on the console is a simple display of a print statement or if it is requiring an input from the user.
+
+(I need to find the professional grammar for this)
+
+
+Exercise 2.13:
+
+- My Guess = 1405**1366
+
